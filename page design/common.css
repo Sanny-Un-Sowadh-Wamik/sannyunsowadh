@@ -1,0 +1,733 @@
+
+
+body {
+    color: rgb(149, 148, 148);
+    position: relative;
+    overflow-x: hidden;
+    background-image: url('../Photos/5053309.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+a {
+    text-decoration: none;
+}
+body b {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.Aboutme {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.Aboutme .text {
+    padding-bottom: 40px; /* Creates space for social links */
+    position: relative; 
+    margin: 20px 0;
+    padding-left: 0;
+    margin-right: 0;
+    flex: 1;
+}
+
+.Aboutme .photo {
+    position: static;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.Aboutme .photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.Aboutme .memoji {
+    position: static;
+    width: 200px;
+    height: 380px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.Aboutme .memoji img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .Aboutme {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Aboutme .text {
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .Aboutme .photo {
+        margin-bottom: 20px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .Aboutme .memoji {
+        width: 180px;
+        height: 340px;
+        margin-left: 0;
+    }
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .Aboutme {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    .Aboutme .memoji,
+    .Aboutme .photo {
+        width: 100% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+    }
+
+    .Aboutme .text {
+        padding-left: 0;
+        padding-bottom: 40px;
+    }
+
+    .Aboutme .photo {
+        width: 200px;
+        height: 350px;
+    }
+
+    .Aboutme .memoji {
+        width: 200px;
+        height: 540px;
+        margin-left: 0;
+    }
+    .Aboutme .social-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .Aboutme .social-links a {
+        flex: 1 1 auto;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Aboutme {
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Aboutme .text {
+        margin: 10px 0;
+        padding-bottom: 60px;
+    }
+
+    .Aboutme .photo {
+        width: 220px;
+        height: 320px;
+    }
+
+    .Aboutme .memoji {
+        width: 120px;
+        height: 440px;
+        margin-left: 0;
+    }
+}
+
+.Aboutme:hover {
+    border: 1px solid rgb(255, 215, 0);
+    transition: border 0.2s ease;
+}
+.Aboutme .social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 0;
+    flex-wrap: wrap;
+    width: calc(100% - 40px); /* Adjust width to fit within the Aboutme box */
+}
+.Aboutme .social-links a {
+    display: inline-block;
+    width: auto;
+    border: 1px solid transparent;
+    background-color: black;
+    transition: border 0.2s ease, transform 0.2s ease;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.Aboutme .social-links a:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 40px rgb(255, 215, 0);
+    transform: scale(1.2);
+}
+.Projects {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+.left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right-column {
+    flex: 1;
+    min-width: 300px;
+}
+.Projects .skills {
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.Projects .skills h2 {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.Projects .skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Projects .skills ul li {
+    color: rgb(149, 148, 148);
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+    .Projects {
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    .Projects {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .Projects {
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+.clock.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#clock {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fffdfd;
+    text-align: center;
+    margin-top: 20px;
+}
+#clock:hover {
+    color: rgb(255, 215, 0);
+    transition: color 0.2s ease;
+}
+
+.Projects .skills:hover {
+    border: 1px solid rgb(255, 215, 0);
+    transition: border 0.2s ease;
+}
+.Projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Projects .clock {
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 768px) {
+    .Projects .clock {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Projects .clock {
+        padding: 5px;
+    }
+}
+.Projects .project-show {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.Projects .project-show h2 {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+}
+
+.Projects .Project-details .projects-link {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5em;
+    color: white;
+    transition: transform 0.2s ease;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Projects .Project-details .projects-link:hover {
+    transform: translateX(10px);
+}
+.Projects .Project-details:hover .projects-link {
+    transform: translateX(10px);
+}
+.Projects .Project-details .texts {
+    color: rgb(149, 148, 148);
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.Projects .Project-details .projects-link {
+    margin-left: 10px;
+    font-size: 1.5em;
+    color: white;
+    transition: transform 0.2s ease;
+    align-self: flex-end;
+}
+@media (max-width: 1130px) {
+    .Projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Projects .skills,
+    .Projects .clock,
+    .Projects .project-show {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Projects .skills,
+    .Projects .clock,
+    .Projects .project-show {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Projects .skills,
+    .Projects .clock,
+    .Projects .project-show {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.Projects .skills,
+.Projects .Project-details {
+    flex: 1;
+    min-width: 300px;
+}
+.Projects .status {
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1130px) {
+    .Projects .status {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Projects .status {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Projects .status {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes blink {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.status.Aboutme {
+    position: relative;
+    padding: 25px;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.status-header h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(29, 26, 26, 0.9);
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.blinking-light {
+    width: 12px;
+    height: 12px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.status-text {
+    color: #00ff00;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+}
+
+/* Add hover effect */
+.blinking-light:hover {
+    animation: blink 0.5s infinite;
+    cursor: pointer;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .status-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .status-indicator {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .status-header h2 {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 480px) {
+    .status-indicator {
+        padding: 6px 12px;
+    }
+    
+    .status-text {
+        font-size: 0.8rem;
+    }
+    
+    .blinking-light {
+        width: 10px;
+        height: 10px;
+    }
+}
+.status.Aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.status-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.status-indicator {
+    align-self: flex-start;
+    margin-left: auto;
+}
+.resume {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.resume {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.resume .resume-section {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: slideUp 0.5s ease-out;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid rgb(149, 148, 148);
+    border-radius: 5px;
+    background-color: rgb(29, 26, 26);
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 215, 0);
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(255, 215, 0);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(149, 148, 148);
+}
+.resume:hover {
+    border: 1px solid rgb(255, 215, 0);
+    transition: border 0.2s ease;
+}
+
+
+
+
+.Project-Infos .project-used-car,
+.Project-Infos .project-data-analysis,
+.Project-Infos .project-portfolio {
+    padding: 20px;
+    background-color: rgb(29, 26, 26);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Project-Infos h2 {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.Project-Infos p {
+    color: rgb(149, 148, 148);
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.Project-Infos .projects-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.Project-Infos .projects-link:hover {
+    transform: translateX(10px);
+}
+
+@media (max-width: 1024px) {
+    .Project-Infos .project-used-car,
+    .Project-Infos .project-data-analysis,
+    .Project-Infos .project-portfolio {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .Project-Infos .project-used-car,
+    .Project-Infos .project-data-analysis,
+    .Project-Infos .project-portfolio {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .Project-Infos .project-used-car,
+    .Project-Infos .project-data-analysis,
+    .Project-Infos .project-portfolio {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+main {
+    animation: slideUp 0.5s ease-out;
+}
